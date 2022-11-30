@@ -193,7 +193,7 @@ decode(FILE *input, FILE *output)
 			jp_panic("Failed to find key for %s", key);
 		}
 
-		fprintf(output, "%s\n%s, %s",
+		fprintf(output, "%s\n%s: %s",
 			comma ? "," : "",
 			json_object_to_json_string(k),
 			json_object_to_json_string(val));
