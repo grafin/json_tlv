@@ -7,7 +7,7 @@
 struct jp_tlv_data *
 jp_tlv_data_new(
 	const enum jp_tlv_data_type type,
-	const uint8_t length,
+	const jp_tlv_length_t length,
 	const void *value)
 {
 	struct jp_tlv_data *data = malloc(sizeof(struct jp_tlv_data));

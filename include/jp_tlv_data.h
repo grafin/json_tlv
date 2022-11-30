@@ -15,6 +15,8 @@ enum jp_tlv_data_type {
 	JP_TLV_DATA_TYPE_MAX
 };
 
+typedef uint32_t jp_tlv_length_t;
+
 union jp_tlv_data_value {
 	char *string;
 	int64_t integer;
@@ -24,14 +26,14 @@ union jp_tlv_data_value {
 
 struct jp_tlv_data {
 	enum jp_tlv_data_type type;
-	uint8_t length;
+	jp_tlv_length_t length;
 	union jp_tlv_data_value value;
 };
 
 struct jp_tlv_data *
 jp_tlv_data_new(
 	const enum jp_tlv_data_type type,
-	const uint8_t length,
+	const jp_tlv_length_t length,
 	const void *value);
 void
 jp_tlv_data_free(struct jp_tlv_data *data);
