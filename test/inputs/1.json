@@ -1,0 +1,9 @@
+{
+  "null_obj": null,
+  "true_obj": true,
+  "false_obj": false,
+  "null_obj_1": null,
+  "int_obj": 123321412312,
+  "float_obj": 123.456,
+  "string_obj": "string"
+}
